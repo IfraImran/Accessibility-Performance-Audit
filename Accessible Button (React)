@@ -1,0 +1,12 @@
+export default function Button({ loading, children, ...props }) {
+  return (
+    <button
+      {...props}
+      disabled={loading}
+      aria-busy={loading}
+      aria-live="polite"
+    >
+      {loading ? "Loading..." : children}
+    </button>
+  );
+}
